@@ -1,0 +1,35 @@
+<div>
+  <div class="background">
+    <div class="container" *ngIf="joinForm">
+      <div class="row">
+        <div class="Absolute-Center is-Responsive">
+          <div class="col-sm-12 col-md-10">
+            <input class="form-control" type="text" name='username' placeholder="Username" [(ngModel)]="username" />
+            <input class="form-control btn-primary" type="button" (click)="join()" value="Join" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" *ngIf="chatForm">
+      <div class="row Full">
+        <div class="Absolute-Center is-Responsive-Chat">
+          <div class="row Full scroll">
+            <div>
+              <div class="row msgcontainer" *ngFor="let msg of messages">
+                  <p style="font-weight: bold;">{{msg.sender}}<p><p>:</p><p style="padding-left: 5px;">{{msg.message}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="row Bottom">
+            <div class="col-sm-10">
+              <input class="form-control" type="text" name='username' placeholder="Message" [(ngModel)]="message" />
+            </div>
+            <div class="col-sm-2">
+              <input class="form-control btn-primary" type="button" (click)="sendMessage()" value="Send" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
