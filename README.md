@@ -1,1 +1,1 @@
-# realtime-chat-application
+# Realtime Chat Application Demo with SignalR
